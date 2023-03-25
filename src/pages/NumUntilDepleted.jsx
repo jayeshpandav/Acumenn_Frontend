@@ -83,24 +83,47 @@ const NumUntilDepleted = () => {
     if (result) {
       //   console.log(result);
       return (
-        <p>
-          <span>No. of Withdrawals Until Account is Depleted : </span>{" "}
-          {result.num_withdrawals_until_depleted}
-        </p>
+        <div
+          className="container m-auto mt-3 d-flex flex-column"
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
+          <p>
+            <strong>Inflation Rate :</strong> {result.inflation_rate}
+          </p>
+          <p>
+            <strong>Initial Investment :</strong> {result.initial_investment}
+          </p>
+          <p>
+            <strong>No. of Withdrawals Until Account is Depleted :</strong>{" "}
+          </p>
+          <p>{result.num_withdrawals_until_depleted}</p>
+          <p>
+            <strong>Return on Investment :</strong> {result.roi}
+          </p>
+          <p>
+            <strong>Withdrawal Amount :</strong> {result.withdrawal_amount}
+          </p>
+          <p>
+            <strong>Withdrawal Frequency :</strong>{" "}
+          </p>
+          <p>{result.withdrawal_frequency}</p>
+        </div>
       );
     }
   };
 
   return (
     <>
-      <form className="container w-50 mt-2" onSubmit={handleSubmit}>
-        {formGroups}
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </form>
+      <div className="optionform">
+        <form className="container w-50 mt-2" onSubmit={handleSubmit}>
+          {formGroups}
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </form>
 
-      {displayResult()}
+        {displayResult()}
+      </div>
     </>
   );
 };

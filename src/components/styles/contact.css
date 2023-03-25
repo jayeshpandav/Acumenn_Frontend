@@ -11,13 +11,6 @@
   /* border-top: 1px solid black; */
 }
 
-@media (max-width: 750px) {
-  #contact {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 .rightside {
   display: grid;
   justify-content: center;
@@ -67,4 +60,14 @@
 
 .send {
   text-decoration: none;
+}
+
+@media (max-width: 750px) {
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_option {
+    width: 50vw;
+  }
 }

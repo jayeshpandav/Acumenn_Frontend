@@ -47,7 +47,7 @@ const TotalWithdrawn = () => {
   const formGroups = Object.keys(formData).map((key) => {
     if (key === "withdrawal_frequency") {
       return (
-        <Form.Group className="mb-3 row" controlId={key}>
+        <Form.Group className="mb-3 row " controlId={key}>
           <Form.Label className="col">{key}</Form.Label>
           <Form.Select
             className="col"
@@ -83,11 +83,23 @@ const TotalWithdrawn = () => {
     if (result) {
       //   console.log(result);
       return (
-        <div>
-          <p>Total Amount Withdrawn: {result.total_amount_withdrawn}</p>
-          <p>Withdrawal Frequency: {result.withdrawal_frequency}</p>
-          <p>Withdrawal Amount: {result.withdrawal_amount}</p>
-          <p>Withdrawals Per Year: {result.withdrawals_per_year}</p>
+        <div
+          className="container m-auto mt-3 d-flex flex-column"
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
+          <p>
+            <strong>Total Amount Withdrawn:</strong>{" "}
+            {result.total_amount_withdrawn}
+          </p>
+          <p>
+            <strong>Withdrawal Frequency:</strong> {result.withdrawal_frequency}
+          </p>
+          <p>
+            <strong>Withdrawal Amount:</strong> {result.withdrawal_amount}
+          </p>
+          <p>
+            <strong>Withdrawals Per Year:</strong> {result.withdrawals_per_year}
+          </p>
         </div>
       );
     }
@@ -95,14 +107,16 @@ const TotalWithdrawn = () => {
 
   return (
     <>
-      <form className="container w-50 mt-2" onSubmit={handleSubmit}>
-        {formGroups}
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </form>
+      <div className="optionform">
+        <form className="container w-50 mt-2" onSubmit={handleSubmit}>
+          {formGroups}
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </form>
 
-      {displayResult()}
+        {displayResult()}
+      </div>
     </>
   );
 };

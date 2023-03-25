@@ -45,7 +45,7 @@ const SwpWithrawal = () => {
   const formGroups = Object.keys(formData).map((key) => {
     if (key === "withdrawal_frequency") {
       return (
-        <Form.Group className="mb-3 row" controlId={key}>
+        <Form.Group className="mb-3 row " controlId={key}>
           <Form.Label className="col">{key}</Form.Label>
           <Form.Select
             className="col"
@@ -118,14 +118,16 @@ const SwpWithrawal = () => {
 
   return (
     <>
-      <form className="container w-50 mt-2" onSubmit={handleSubmit}>
-        {formGroups}
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </form>
+      <div className="optionform">
+        <form className="container w-50 mt-2" onSubmit={handleSubmit}>
+          {formGroups}
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </form>
 
-      {displayResult()}
+        {displayResult()}
+      </div>
     </>
   );
 };

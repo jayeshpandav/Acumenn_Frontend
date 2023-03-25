@@ -58,7 +58,7 @@ const Contact = () => {
             <article className="contact_option">
               <BsLinkedin className="contact_option-icon" />
               <h4>Linkdin</h4>
-              <h5>Cultivo Group</h5>
+              <h5>Acumenn Linkedin</h5>
               <Link
                 className="send"
                 target="_blank"

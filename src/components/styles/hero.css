@@ -15,15 +15,53 @@
   height: 75vh;
   width: 100vw;
   z-index: -123;
+  /* flex: 1;
+   */
+  display: grid;
+  grid-template-columns: 50% 50%;
   /* border: 2px solid navy; */
-  background-color: #2fffbd;
 }
 
-.banner {
+.banner1 {
+  padding-top: 1em;
   height: 100%;
-  width: 40%;
+  /* width: 40%; */
+  margin: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 800;
   font-size: 2em;
+  background-color: teal;
+  flex: 1;
+}
+/* .banner1 span {
+  margin: auto;
+} */
+.banner {
+  padding-top: 1em;
+  height: 100%;
+  margin: auto;
+  /* width: 40%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 2em;
+  background-color: #2fffbd;
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .herosection {
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner {
+    height: 75vh;
+  }
+  .banner1 {
+    height: 75vh;
+  }
 }
