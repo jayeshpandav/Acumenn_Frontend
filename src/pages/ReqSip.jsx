@@ -50,7 +50,11 @@ const ReqSip = () => {
   return (
     <>
       <div className="optionform">
-        <form className="container w-50 mt-2" onSubmit={handleSubmit}>
+        <form
+          className="container  mt-2 shadow p-5 "
+          style={{ backgroundColor: "rgb(95 230 95)" }}
+          onSubmit={handleSubmit}
+        >
           {formGroups}
           <Button variant="primary" type="submit">
             Submit
@@ -59,7 +63,7 @@ const ReqSip = () => {
 
         {result && (
           <div
-            className="container m-auto mt-3 d-flex flex-column"
+            className="container w-auto m-auto mt-3 d-flex flex-column"
             style={{ justifyContent: "center", alignItems: "center" }}
           >
             <p>

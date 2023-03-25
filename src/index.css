@@ -21,5 +21,10 @@ html {
 }
 
 .optionform {
-  min-height: 100vh;
+  margin-top: 10vh;
+  min-height: 95vh;
+}
+
+.formContainer {
+  width: 50%;
 }

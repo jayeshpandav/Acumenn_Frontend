@@ -34,6 +34,7 @@
   font-size: 2em;
   background-color: teal;
   flex: 1;
+  color: antiquewhite;
 }
 /* .banner1 span {
   margin: auto;
@@ -54,14 +55,14 @@
 
 @media (max-width: 767px) {
   .herosection {
-    height: 150vh;
+    height: 200vh;
     display: flex;
     flex-direction: column;
   }
   .banner {
-    height: 75vh;
+    height: 100vh;
   }
   .banner1 {
-    height: 75vh;
+    height: 100vh;
   }
 }

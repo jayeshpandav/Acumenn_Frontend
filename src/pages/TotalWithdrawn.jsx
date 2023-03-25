@@ -108,7 +108,11 @@ const TotalWithdrawn = () => {
   return (
     <>
       <div className="optionform">
-        <form className="container w-50 mt-2" onSubmit={handleSubmit}>
+        <form
+          className="container w-auto mt-2 shadow p-5 "
+          style={{ backgroundColor: "rgb(95 230 95)" }}
+          onSubmit={handleSubmit}
+        >
           {formGroups}
           <Button variant="primary" type="submit">
             Submit
