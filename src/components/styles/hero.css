@@ -1,0 +1,29 @@
+/* .banner{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../images/cultivobanner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: fill;
+    width: "100vw";
+    border: 2px solid navy;
+    background-size: cover;
+    margin-top: 70px;
+} */
+
+.herosection {
+  height: 75vh;
+  width: 100vw;
+  z-index: -123;
+  /* border: 2px solid navy; */
+  background-color: #2fffbd;
+}
+
+.banner {
+  height: 100%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 2em;
+}
